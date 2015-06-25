@@ -1,0 +1,87 @@
+.menu {
+  @menu-padding: 20px;
+  @header-border-width: 0px;
+  @header-width: @menu-width - (2 * @menu-padding) - (2 * @header-border-width);
+  float: left;
+  padding: 0 @menu-padding;
+  width: @menu-width;
+  box-sizing: border-box;
+
+  .header {
+    height: @header-width;
+    border-radius: @menu-width / 2;
+    background: url('img/RicardoMallols.png') no-repeat center center;
+    background-size: cover;
+    border-width: @header-border-width;
+    border-style: solid;
+    position: relative;
+    z-index: 1;
+
+    .view-home & {
+      background-color: @who-color-2;
+      border-color: @who-color-2
+    }
+
+    .view-skills & {
+      background-color: @what-color-2;
+      border-color: @what-color-2
+    }
+
+    .view-where & {
+      background-color: @where-color-2;
+      border-color: @where-color-2
+    }
+  }
+  
+  ul.navigation {
+    @navigation-gutter: 60px;
+    width: @header-width - (@navigation-gutter / 2);
+    margin: -(@header-width / 2) 0 0 @navigation-gutter / 2;
+    padding: @menu-width / 2 0 10px 0;
+    border-radius: 0 0 20px 20px;
+
+    .view-home & {
+      background-color: @who-color-2;
+    }
+
+    .view-skills & {
+      background-color: @what-color-2;
+    }
+
+    .view-where & {
+      background-color: @where-color-2;
+    }
+
+    li {
+      @icon-width: 60px;
+      list-style-type: none;
+      display: block;
+      position: relative;
+
+      &:hover {
+        .transition (background-color @transition-duration);
+        background-color: @highlight-color;
+
+        icon {
+          left: -@icon-width;
+        }
+      }
+
+      icon {
+        .transition(left @transition-duration);
+        display: block;
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: @icon-width;
+      }
+
+      a {
+        display: block;
+        padding: 20px;
+        text-align: center;
+        font-size: 130%;
+      }
+    }
+  }
+}

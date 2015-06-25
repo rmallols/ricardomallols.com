@@ -1,0 +1,37 @@
+@font-face {
+  font-family: balsamiq;
+  src: url('balsamiq.ttf');
+}
+
+body {
+  @max-width: 1280px;
+  margin: 0 auto;
+  padding: 40px 0;
+  max-width: @max-width;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 21px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: @max-width auto;
+  font-family: balsamiq;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @highlight-color;
+}
+
+.wrapper {
+  margin-left: @menu-width;
+  padding: 0 0 0 30px;
+}

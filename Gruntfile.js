@@ -39,12 +39,19 @@ module.exports = function (grunt) {
                 options: {
                     spawn: false
                 }
+            },
+            svg: {
+                files: ['<%= distFolder %>/img/*.svg'],
+                tasks: ['shell:optimizeSvg'],
+                options: {
+                    spawn: false
+                }
             }
         },
         less: {
             prod: {
                 files: {
-                    "<%= distFolder %>css.css": "<%= srcFolder %>loader.less"
+                    "<%= distFolder %>css.css":  "<%= srcFolder %>/loader.less"
                 }
             }
         },
@@ -84,7 +91,10 @@ module.exports = function (grunt) {
             }
         },
         shell: {
-            startNode: { command: 'node backend/server.js', options: { stdout: true } }
+            startNode: { command: 'node backend/server.js', options: { stdout: true } },
+            optimizeSvg: {
+                command: 'node node_modules/svgo/bin/svgo -f <%= distFolder %>/img',
+                options: { stdout: true }}
         },
         concurrent: {
             options: {
@@ -92,6 +102,18 @@ module.exports = function (grunt) {
             },
             setupDevEnv: {
                 tasks: ['watch', 'shell:startNode']
+            }
+        },
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: 'ricardomallols.com',
+                    port: 21,
+                    authKey: 'user1'
+                },
+                src: 'frontend/dist',
+                dest: '/v2',
+                exclusions: []
             }
         }
     });
@@ -105,6 +127,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-ftp-deploy');
 
     grunt.registerTask('generateJs', ['concat', 'uglify']);
     grunt.registerTask('setupDevEnv', ['concurrent']);

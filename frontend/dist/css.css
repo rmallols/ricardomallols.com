@@ -1,4 +1,163 @@
-body,
-html {
+.test {
+  background-color: white;
+}
+@font-face {
+  font-family: balsamiq;
+  src: url('balsamiq.ttf');
+}
+body {
+  margin: 0 auto;
+  padding: 40px 0;
+  max-width: 1280px;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 21px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 1280px auto;
+  font-family: balsamiq;
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: #00aaef;
+}
+.wrapper {
+  margin-left: 320px;
+  padding: 0 0 0 30px;
+}
+.col-2 {
+  width: 50%;
+  padding: 0 20px;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+.col-2:first-of-type {
+  padding-left: 0;
+}
+.col-2:last-of-type {
+  padding-right: 0;
+}
+.col-3 {
+  width: 33.33%;
+  padding: 0 20px;
+  display: block;
+  float: left;
+  box-sizing: border-box;
+}
+.col-3:first-of-type {
+  padding-left: 0;
+}
+.col-3:last-of-type {
+  padding-right: 0;
+}
+.menu {
+  float: left;
+  padding: 0 20px;
+  width: 320px;
+  box-sizing: border-box;
+}
+.menu .header {
+  height: 280px;
+  border-radius: 160px;
+  background: url('img/RicardoMallols.png') no-repeat center center;
+  background-size: cover;
+  border-width: 0px;
+  border-style: solid;
+  position: relative;
+  z-index: 1;
+}
+.view-home .menu .header {
+  background-color: #25292f;
+  border-color: #25292f;
+}
+.view-skills .menu .header {
+  background-color: #4e5665;
+  border-color: #4e5665;
+}
+.view-where .menu .header {
+  background-color: #7dc3c4;
+  border-color: #7dc3c4;
+}
+.menu ul.navigation {
+  width: 250px;
+  margin: -140px 0 0 30px;
+  padding: 160px 0 10px 0;
+  border-radius: 0 0 20px 20px;
+}
+.view-home .menu ul.navigation {
+  background-color: #25292f;
+}
+.view-skills .menu ul.navigation {
+  background-color: #4e5665;
+}
+.view-where .menu ul.navigation {
+  background-color: #7dc3c4;
+}
+.menu ul.navigation li {
+  list-style-type: none;
+  display: block;
+  position: relative;
+}
+.menu ul.navigation li:hover {
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  background-color: #00aaef;
+}
+.menu ul.navigation li:hover icon {
+  left: -60px;
+}
+.menu ul.navigation li icon {
+  -webkit-transition: left 0.3s;
+  -moz-transition: left 0.3s;
+  -ms-transition: left 0.3s;
+  -o-transition: left 0.3s;
+  display: block;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 60px;
+}
+.menu ul.navigation li a {
+  display: block;
+  padding: 20px;
+  text-align: center;
+  font-size: 130%;
+}
+.view-home {
+  background-color: #30363d;
+  background-image: url('img/home.svg');
+}
+.view-skills {
+  background-color: #596273;
+  background-image: url('img/skills.svg');
+}
+.view-where {
+  background-color: #8fcbcc;
+  background-image: url('img/where.svg');
+}
+.view-where .contact-method {
+  text-align: center;
+}
+.view-where .contact-method a {
+  display: block;
+  font-size: 130%;
+}
+.view-where .contact-method a img {
+  height: 180px;
+  margin-bottom: 30px;
 }

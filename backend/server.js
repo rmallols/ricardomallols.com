@@ -4,12 +4,12 @@ var express = require('express'),
     app = express(),
     port = process.env.PORT || 3000;
 
-app.use(express.static(__dirname + '/../frontend'));
+app.use(express.static(__dirname + '/../frontend/dist'));
 
 http.createServer(app).listen(port, function () {
     console.log("listening on HTTP on port " + port);
 });
 
 app.get(['/'], function (req, res) {
-    res.send(fs.readFileSync(__dirname + '/../frontend/src/index.html').toString());
+    res.send(fs.readFileSync(__dirname + '/../frontend/dist/index.html').toString());
 });
