@@ -11,7 +11,7 @@ body {
   max-width: 1280px;
   height: 100%;
   box-sizing: border-box;
-  font-size: 21px;
+  font-size: 28px;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: 1280px auto;
@@ -20,22 +20,25 @@ body {
 }
 a {
   text-decoration: none;
-  color: white;
+  color: #82cf8f;
 }
 a:hover {
   text-decoration: underline;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+img {
+  max-width: 100%;
+}
+h1 {
   color: #00aaef;
+  font-size: 140%;
+}
+h2 {
+  color: #00aaef;
+  font-size: 120%;
 }
 .wrapper {
-  margin-left: 320px;
-  padding: 0 0 0 30px;
+  margin-left: 400px;
+  padding: 0 30px;
 }
 .col-2 {
   width: 50%;
@@ -65,25 +68,25 @@ h6 {
 }
 .menu {
   float: left;
-  padding: 0 20px;
-  width: 320px;
+  padding: 0 40px;
+  width: 400px;
   box-sizing: border-box;
 }
 .menu .header {
-  height: 280px;
-  border-radius: 160px;
-  background: url('img/RicardoMallols.png') no-repeat center center;
+  height: 320px;
+  border-radius: 200px;
+  background: url('img/RicardoMallols2.png') no-repeat center center;
   background-size: cover;
   border-width: 0px;
   border-style: solid;
   position: relative;
   z-index: 1;
 }
-.view-home .menu .header {
-  background-color: #25292f;
-  border-color: #25292f;
+.view-who .menu .header {
+  background-color: #2c3137;
+  border-color: #2c3137;
 }
-.view-skills .menu .header {
+.view-what .menu .header {
   background-color: #4e5665;
   border-color: #4e5665;
 }
@@ -92,15 +95,15 @@ h6 {
   border-color: #7dc3c4;
 }
 .menu ul.navigation {
-  width: 250px;
-  margin: -140px 0 0 30px;
-  padding: 160px 0 10px 0;
+  width: 290px;
+  margin: -160px 0 0 30px;
+  padding: 200px 0 10px 0;
   border-radius: 0 0 20px 20px;
 }
-.view-home .menu ul.navigation {
-  background-color: #25292f;
+.view-who .menu ul.navigation {
+  background-color: #2c3137;
 }
-.view-skills .menu ul.navigation {
+.view-what .menu ul.navigation {
   background-color: #4e5665;
 }
 .view-where .menu ul.navigation {
@@ -116,10 +119,19 @@ h6 {
   -moz-transition: background-color 0.3s;
   -ms-transition: background-color 0.3s;
   -o-transition: background-color 0.3s;
-  background-color: #00aaef;
+  background-color: #82cf8f;
 }
 .menu ul.navigation li:hover icon {
   left: -60px;
+}
+.menu ul.navigation li.who-link a {
+  color: #00aaef;
+}
+.menu ul.navigation li.what-link a {
+  color: #f7d884;
+}
+.menu ul.navigation li.where-link a {
+  color: #82cf8f;
 }
 .menu ul.navigation li icon {
   -webkit-transition: left 0.3s;
@@ -131,20 +143,46 @@ h6 {
   left: 0;
   height: 100%;
   width: 60px;
+  box-sizing: border-box;
+  z-index: -1;
+  border-radius: 20px 0 0 20px;
+  background-color: #82cf8f;
+  background-position: 17px 13px;
+  background-repeat: no-repeat;
+  background-size: 80%;
+}
+.menu ul.navigation li icon.who-link-icon {
+  background-image: url('img/whoIcon.svg');
+}
+.menu ul.navigation li icon.what-link-icon {
+  background-image: url('img/whatIcon.svg');
+}
+.menu ul.navigation li icon.where-link-icon {
+  background-image: url('img/whereIcon.svg');
 }
 .menu ul.navigation li a {
+  font-size: 130%;
   display: block;
   padding: 20px;
   text-align: center;
-  font-size: 130%;
 }
-.view-home {
+.menu ul.navigation li a:hover {
+  color: white;
+}
+.view-who {
   background-color: #30363d;
-  background-image: url('img/home.svg');
+  background-image: url('img/who.svg');
 }
-.view-skills {
+.view-who .who-sports-img {
+  padding: 20px 0 38px 0;
+}
+.view-who .who-title {
+  margin-top: 0;
+  text-align: center;
+}
+.view-what {
   background-color: #596273;
-  background-image: url('img/skills.svg');
+  background-image: url('img/what.svg');
 }
 .view-where {
   background-color: #8fcbcc;

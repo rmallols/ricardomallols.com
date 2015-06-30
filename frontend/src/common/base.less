@@ -10,7 +10,7 @@ body {
   max-width: @max-width;
   height: 100%;
   box-sizing: border-box;
-  font-size: 21px;
+  font-size: 28px;
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: @max-width auto;
@@ -20,18 +20,28 @@ body {
 
 a {
   text-decoration: none;
-  color: white;
+  color: @link-color;
 
   &:hover {
     text-decoration: underline;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+img {
+  max-width: 100%;
+}
+
+h1 {
   color: @highlight-color;
+  font-size: 140%;
+}
+
+h2 {
+  color: @highlight-color;
+  font-size: 120%;
 }
 
 .wrapper {
   margin-left: @menu-width;
-  padding: 0 0 0 30px;
+  padding: 0 30px;
 }

@@ -1,5 +1,6 @@
 .menu {
-  @menu-padding: 20px;
+  @menu-padding: 40px;
+  @border-radius: 20px;
   @header-border-width: 0px;
   @header-width: @menu-width - (2 * @menu-padding) - (2 * @header-border-width);
   float: left;
@@ -10,19 +11,19 @@
   .header {
     height: @header-width;
     border-radius: @menu-width / 2;
-    background: url('img/RicardoMallols.png') no-repeat center center;
+    background: url('img/RicardoMallols2.png') no-repeat center center;
     background-size: cover;
     border-width: @header-border-width;
     border-style: solid;
     position: relative;
     z-index: 1;
 
-    .view-home & {
+    .view-who & {
       background-color: @who-color-2;
       border-color: @who-color-2
     }
 
-    .view-skills & {
+    .view-what & {
       background-color: @what-color-2;
       border-color: @what-color-2
     }
@@ -38,13 +39,13 @@
     width: @header-width - (@navigation-gutter / 2);
     margin: -(@header-width / 2) 0 0 @navigation-gutter / 2;
     padding: @menu-width / 2 0 10px 0;
-    border-radius: 0 0 20px 20px;
+    border-radius: 0 0 @border-radius @border-radius;
 
-    .view-home & {
+    .view-who & {
       background-color: @who-color-2;
     }
 
-    .view-skills & {
+    .view-what & {
       background-color: @what-color-2;
     }
 
@@ -60,10 +61,29 @@
 
       &:hover {
         .transition (background-color @transition-duration);
-        background-color: @highlight-color;
+        background-color: @link-color;
 
         icon {
           left: -@icon-width;
+        }
+      }
+
+      &.who-link {
+        a {
+          color: #00aaef;
+        }
+      }
+
+      &.what-link {
+        a {
+          color: #f7d884;
+        }
+      }
+
+      &.where-link {
+        a {
+//          color: #b987ce;
+          color: #82cf8f;
         }
       }
 
@@ -74,13 +94,36 @@
         left: 0;
         height: 100%;
         width: @icon-width;
+        box-sizing: border-box;
+        z-index: -1;
+        border-radius: @border-radius 0 0 @border-radius;
+        background-color: @link-color;
+        background-position: 17px 13px;
+        background-repeat: no-repeat;
+        background-size: 80%;
+
+        &.who-link-icon {
+          background-image: url('img/whoIcon.svg');
+        }
+
+        &.what-link-icon {
+          background-image: url('img/whatIcon.svg');
+        }
+
+        &.where-link-icon {
+          background-image: url('img/whereIcon.svg');
+        }
       }
 
       a {
+        font-size: 130%;
         display: block;
         padding: 20px;
         text-align: center;
-        font-size: 130%;
+
+        &:hover {
+          color: white;
+        }
       }
     }
   }

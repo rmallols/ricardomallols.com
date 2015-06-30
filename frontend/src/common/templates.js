@@ -1,41 +1,20 @@
-angular.module('templates-main', ['menu.html', 'home.html', 'skills.html', 'where.html']);
+angular.module('templates-main', ['menu.html', 'what.html', 'where.html', 'who.html']);
 
 angular.module("menu.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("menu.html",
     "<div class=\"menu\">\n" +
     "    <div class=\"header\"></div>\n" +
     "    <ul class=\"navigation\">\n" +
-    "        <li>\n" +
-    "            <icon>X</icon>\n" +
-    "            <a ui-sref=\"home\">Who I am</a>\n" +
+    "        <li ng-repeat=\"link in links\" class=\"{{link.id}}-link\">\n" +
+    "            <icon class=\"{{link.id}}-link-icon\"></icon>\n" +
+    "            <a ui-sref=\"{{link.id}}\">{{link.text}}</a>\n" +
     "        </li>\n" +
-    "        <li><a ui-sref=\"skills\">What I do</a></li>\n" +
-    "        <li><a ui-sref=\"where\">Where I am</a></li>\n" +
     "    </ul>\n" +
-    "\n" +
     "</div>");
 }]);
 
-angular.module("home.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("home.html",
-    "<p>I'm Ricardo Mallols, a computer engineer born in Valencia (Spain) in 1984.\n" +
-    "    Here you will find both personal and professional information about me.</p>\n" +
-    "<p>Well, I would like to start talking about my hobbies:</p>\n" +
-    "<p>\n" +
-    "    <div class=\"col-2\">\n" +
-    "        Interfaces: I love exploring new ways to make the relationship between people\n" +
-    "        and machines more human, intuitive, easy and fun.\n" +
-    "    </div>\n" +
-    "    <div class=\"col-2\">\n" +
-    "        (Motor)Sports: I practice beach volleyball and table tennis. I like motor racing,\n" +
-    "        particularly F1, DTM, MotoGP and Slot.\n" +
-    "    </div>\n" +
-    "</p>\n" +
-    "");
-}]);
-
-angular.module("skills.html", []).run(["$templateCache", function($templateCache) {
-  $templateCache.put("skills.html",
+angular.module("what.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("what.html",
     "<p>\n" +
     "    I have 11 years of experience in the scope of the Information Technologies. I’m specialist in the areas of frontend development, usability, user interface, user experience and automated testing.\n" +
     "    <br/><br/>\n" +
@@ -71,6 +50,31 @@ angular.module("where.html", []).run(["$templateCache", function($templateCache)
     "            <img src=\"img/twitter.svg\"/>\n" +
     "            @RicardoMallols\n" +
     "        </a>\n" +
+    "    </div>\n" +
+    "</p>");
+}]);
+
+angular.module("who.html", []).run(["$templateCache", function($templateCache) {
+  $templateCache.put("who.html",
+    "<p>I'm Ricardo Mallols, a computer engineer born in Valencia (Spain) in 1984.\n" +
+    "    Here you will find both personal and professional information about me.</p>\n" +
+    "<p>Well, I would like to start talking about my hobbies:</p>\n" +
+    "<p>\n" +
+    "    <div class=\"col-2\">\n" +
+    "        <p>\n" +
+    "            <img src=\"img/whoCoding.svg\" class=\"who-coding-img\"/>\n" +
+    "        </p>\n" +
+    "        <p>\n" +
+    "            <h2 class=\"who-title\">Coding</h2>\n" +
+    "            I'm a technology enthusiast who enjoys running any kind of experimental\n" +
+    "            stuff on the browser, specially with Javascript, AngularJs, HTML5 and CSS3.\n" +
+    "        <p>\n" +
+    "    </div>\n" +
+    "    <div class=\"col-2\">\n" +
+    "        <img src=\"img/whoSports.svg\" class=\"who-sports-img\"/>\n" +
+    "        <h2 class=\"who-title\">(Motor)Sports</h2>\n" +
+    "        I practice beach volleyball and tennis. I like motor racing,\n" +
+    "        particularly F1, DTM, MotoGP and digital Slot. Anki Drive is the future!\n" +
     "    </div>\n" +
     "</p>");
 }]);

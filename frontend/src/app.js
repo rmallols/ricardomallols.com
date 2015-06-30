@@ -5,17 +5,17 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider',
 
         $stateProvider
 
-            .state('home', {
+            .state('who', {
                 url: '/',
-                templateUrl: "home.html",
-                controller: 'HomeCtrl',
+                templateUrl: "who.html",
+                controller: 'WhoCtrl',
                 pageTitle: 'Hi! Welcome to Ricardo Mallols personal site'
             })
 
-            .state('skills', {
-                url: '/skills',
-                templateUrl: "skills.html",
-                controller: 'SkillsCtrl',
+            .state('what', {
+                url: '/what',
+                templateUrl: "what.html",
+                controller: 'WhatCtrl',
                 pageTitle: 'What I do?'
             })
 
