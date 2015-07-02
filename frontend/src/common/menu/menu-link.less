@@ -1,0 +1,92 @@
+.link {
+  @icon-width: 60px;
+  list-style-type: none;
+  display: block;
+  position: relative;
+
+  &:hover,
+  &.link-current {
+    .transition (background-color @transition-duration);
+
+    &.link-who {
+      background-color: @who-color;
+
+      .link-icon {
+        background-color: @who-color;
+      }
+    }
+
+    &.link-what {
+      background-color: @what-color;
+
+      .link-icon {
+        background-color: @what-color;
+      }
+    }
+
+    &.link-where {
+      background-color: @where-color;
+
+      .link-icon {
+        background-color: @where-color;
+      }
+    }
+
+    .link-icon {
+      left: -@icon-width;
+    }
+
+    .link-text {
+      //We are EXCEPTIONALLY using the !important flag here to avoid
+      //increasing the complexity of the link-text selectors whenever
+      //the link is NOT the current one
+      color: white !important;
+    }
+  }
+
+  .link-icon {
+    .transition(left @transition-duration);
+    display: block;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: @icon-width;
+    box-sizing: border-box;
+    z-index: -1;
+    border-radius: @border-radius 0 0 @border-radius;
+    background-position: 17px 13px;
+    background-repeat: no-repeat;
+    background-size: 80%;
+
+    &.link-icon-who {
+      background-image: url('img/whoIcon.svg');
+    }
+
+    &.link-icon-what {
+      background-image: url('img/whatIcon.svg');
+    }
+
+    &.link-icon-where {
+      background-image: url('img/whereIcon.svg');
+    }
+  }
+
+  .link-text {
+    font-size: 130%;
+    display: block;
+    padding: 20px;
+    text-align: center;
+
+    &.link-text-who {
+      color: @who-color;
+    }
+
+    &.link-text-what {
+      color: @what-color;
+    }
+
+    &.link-text-where {
+      color: @where-color;
+    }
+  }
+}

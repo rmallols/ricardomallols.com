@@ -1,9 +1,12 @@
 <div class="menu">
     <div class="header"></div>
     <ul class="navigation">
-        <li ng-repeat="link in links" class="{{link.id}}-link">
-            <icon class="{{link.id}}-link-icon"></icon>
-            <a ui-sref="{{link.id}}">{{link.text}}</a>
+        <li ng-repeat="link in links" class="link link-{{link.id}}"
+            ng-class="{'link-current': link.id === currentState}">
+            <icon class="link-icon link-icon-{{link.id}}"></icon>
+            <a ui-sref="{{link.id}}" class="link-text link-text-{{link.id}}">
+                {{link.text}}
+            </a>
         </li>
     </ul>
 </div>

@@ -1,6 +1,5 @@
 .menu {
   @menu-padding: 40px;
-  @border-radius: 20px;
   @header-border-width: 0px;
   @header-width: @menu-width - (2 * @menu-padding) - (2 * @header-border-width);
   float: left;
@@ -11,120 +10,35 @@
   .header {
     height: @header-width;
     border-radius: @menu-width / 2;
-    background: url('img/RicardoMallols2.png') no-repeat center center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: @background-color-2;
     background-size: cover;
     border-width: @header-border-width;
     border-style: solid;
+    border-color: @background-color-2;
     position: relative;
     z-index: 1;
 
     .view-who & {
-      background-color: @who-color-2;
-      border-color: @who-color-2
+      background-image: url('img/RicardoMallolsWho.png');
     }
 
     .view-what & {
-      background-color: @what-color-2;
-      border-color: @what-color-2
+      background-image: url('img/RicardoMallolsWhat.png');
     }
 
     .view-where & {
-      background-color: @where-color-2;
-      border-color: @where-color-2
+      background-image: url('img/RicardoMallolsWhere.png');
     }
   }
   
-  ul.navigation {
+  .navigation {
     @navigation-gutter: 60px;
     width: @header-width - (@navigation-gutter / 2);
     margin: -(@header-width / 2) 0 0 @navigation-gutter / 2;
-    padding: @menu-width / 2 0 10px 0;
+    padding: @menu-width / 2 0 20px 0;
     border-radius: 0 0 @border-radius @border-radius;
-
-    .view-who & {
-      background-color: @who-color-2;
-    }
-
-    .view-what & {
-      background-color: @what-color-2;
-    }
-
-    .view-where & {
-      background-color: @where-color-2;
-    }
-
-    li {
-      @icon-width: 60px;
-      list-style-type: none;
-      display: block;
-      position: relative;
-
-      &:hover {
-        .transition (background-color @transition-duration);
-        background-color: @link-color;
-
-        icon {
-          left: -@icon-width;
-        }
-      }
-
-      &.who-link {
-        a {
-          color: #00aaef;
-        }
-      }
-
-      &.what-link {
-        a {
-          color: #f7d884;
-        }
-      }
-
-      &.where-link {
-        a {
-//          color: #b987ce;
-          color: #82cf8f;
-        }
-      }
-
-      icon {
-        .transition(left @transition-duration);
-        display: block;
-        position: absolute;
-        left: 0;
-        height: 100%;
-        width: @icon-width;
-        box-sizing: border-box;
-        z-index: -1;
-        border-radius: @border-radius 0 0 @border-radius;
-        background-color: @link-color;
-        background-position: 17px 13px;
-        background-repeat: no-repeat;
-        background-size: 80%;
-
-        &.who-link-icon {
-          background-image: url('img/whoIcon.svg');
-        }
-
-        &.what-link-icon {
-          background-image: url('img/whatIcon.svg');
-        }
-
-        &.where-link-icon {
-          background-image: url('img/whereIcon.svg');
-        }
-      }
-
-      a {
-        font-size: 130%;
-        display: block;
-        padding: 20px;
-        text-align: center;
-
-        &:hover {
-          color: white;
-        }
-      }
-    }
+    background-color: @background-color-2;
   }
 }
