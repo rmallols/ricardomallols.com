@@ -13,24 +13,48 @@ angular.module("menu.html", []).run(["$templateCache", function($templateCache) 
     "            </a>\n" +
     "        </li>\n" +
     "    </ul>\n" +
+    "    <a href=\"http://angularconnect.com/speakers#ricardo-mallols\"\n" +
+    "       target=\"_blank\" class=\"angular-connect\">\n" +
+    "        <img src=\"img/angularConnect.svg\" />\n" +
+    "    </a>\n" +
     "</div>");
 }]);
 
 angular.module("what.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("what.html",
-    "<p>\n" +
-    "    I have 11 years of experience in the scope of the Information Technologies. I’m specialist in the areas of frontend development, usability, user interface, user experience and automated testing.\n" +
-    "    <br/><br/>\n" +
-    "    I’m a very organized, responsible and committed person. I consider communication, respect and teamwork as the key to personal and professional success.\n" +
-    "    <br/><br/>\n" +
-    "    Technology enthusiast, my aspirations are related to face new and motivating challenges where I can work as part of a team, contributing with my knowledge and continuously learning from my environment.\n" +
-    "    <br/><br/>\n" +
-    "    I feel really comfortable working with user interfaces, creating user experience and designing usability stories. Additionally, I really like to interact with OOP Javascript, specially with an MVC framework such as AngularJs in order to be able to build high quality, scalable web applications.\n" +
-    "    <br/><br/>\n" +
-    "    I have, moreover, experience in the back-end side with Node.js + Express, GruntJs and MongoDb for the persistence topic.\n" +
-    "    <br/><br/>\n" +
-    "    My favourite tech books are: Javascript: The Good Parts, Mastering Web Application Development with AngularJS and SMACSS (Scalable and Modular Architecture for CSS).\n" +
-    "</p>");
+    "<div class=\"what-section what-section-javascript\">\n" +
+    "    <h2 class=\"title title-section\">Javascript & AngularJs</h2>\n" +
+    "    <div class=\"what-section-description\">\n" +
+    "        I've working with plain Javascript since 2005. <br/>\n" +
+    "        Paralelly, I started to work with AngularJs since 2011 (v0.6),\n" +
+    "        and I've been using it in a daily basis both on a commercial an personal\n" +
+    "        perspective since then.\n" +
+    "        Testing is a must for me (unit + functional + integration).\n" +
+    "    </div>\n" +
+    "    <img class=\"what-section-image\" src=\"img/angularJs.svg\"/>\n" +
+    "</div>\n" +
+    "<div class=\"what-section what-section-html\">\n" +
+    "    <h2 class=\"title title-section\">HTML(5) & CSS(3)</h2>\n" +
+    "    <div class=\"what-section-description\">\n" +
+    "        I'm building HTML & CSS based webapps since 2002. On the recent years,\n" +
+    "        I've embraced the capabilities of HTML5 and CSS3 (including LESS & SASS) in order\n" +
+    "        to build solutions that\n" +
+    "        not only have to work fine, but also have to look really well.\n" +
+    "        I really like to work on UI / UX topics, and I build my apps based on the\n" +
+    "        mobile-first principle.\n" +
+    "    </div>\n" +
+    "    <img class=\"what-section-image\" src=\"img/html5.svg\"/>\n" +
+    "</div>\n" +
+    "<div class=\"what-section what-section-others\">\n" +
+    "    <h2 class=\"title title-section\">HTML(5) & CSS(3)</h2>\n" +
+    "    <div class=\"what-section-description\">\n" +
+    "        I've experience working with a different range of technologies, frameworks and tools\n" +
+    "        such as\n" +
+    "        NodeJs, Express, GruntJs, Bower and MongoDB\n" +
+    "        Talking about deployment, I've been working with TeamCity, Jenkins and Heroku.\n" +
+    "    </div>\n" +
+    "    <img class=\"what-section-image\" src=\"img/nodeJs.svg\"/>\n" +
+    "</div>");
 }]);
 
 angular.module("where.html", []).run(["$templateCache", function($templateCache) {
@@ -72,18 +96,19 @@ angular.module("who.html", []).run(["$templateCache", function($templateCache) {
     "<p>Well, I would like to start talking about my hobbies:</p>\n" +
     "<p>\n" +
     "    <div class=\"col-2\">\n" +
-    "        <p>\n" +
-    "            <img src=\"img/whoCoding.svg\" class=\"who-coding-img\"/>\n" +
+    "        <h2 class=\"title title-section\">Coding</h2>\n" +
+    "        <p class=\"who-img-wrapper\">\n" +
+    "            <img src=\"img/whoCoding.svg\" class=\"who-img who-img-coding\"/>\n" +
     "        </p>\n" +
     "        <p>\n" +
-    "            <h2 class=\"title title-section\">Coding</h2>\n" +
-    "            I'm a technology enthusiast who enjoys running any kind of experimental\n" +
-    "            stuff on the browser, specially with Javascript, AngularJs, HTML5 and CSS3.\n" +
-    "        <p>\n" +
+    "        I'm a technology enthusiast who enjoys running any kind of experimental\n" +
+    "        stuff on the browser, specially with Javascript, AngularJs, HTML5 and CSS3.\n" +
     "    </div>\n" +
     "    <div class=\"col-2\">\n" +
-    "        <img src=\"img/whoSports.svg\" class=\"who-sports-img\"/>\n" +
     "        <h2 class=\"title title-section\">(Motor)Sports</h2>\n" +
+    "        <p class=\"who-img-wrapper\">\n" +
+    "            <img src=\"img/whoSports.svg\" class=\"who-img who-img-sports\"/>\n" +
+    "        </p>\n" +
     "        I practice beach volleyball and tennis. I like motor racing,\n" +
     "        particularly F1, DTM, MotoGP and digital Slot. Anki Drive is the future!\n" +
     "    </div>\n" +

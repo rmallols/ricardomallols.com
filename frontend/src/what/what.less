@@ -4,4 +4,55 @@
   .title {
     color: @what-color;
   }
+
+  .what-section {
+    float: left;
+    width: 100%;
+    margin-bottom: 40px;
+
+    &.what-section-javascript {
+
+      .what-section-description {
+        float: left;
+        width: 60%;
+      }
+
+      .what-section-image {
+        float: right;
+        width: 40%;
+        padding-left: 50px;
+        box-sizing: border-box;
+      }
+    }
+
+    &.what-section-html {
+
+      .what-section-description {
+        float: right;
+        width: 64%;
+      }
+
+      .what-section-image {
+        float: left;
+        width: 36%;
+        padding-right: 50px;
+        box-sizing: border-box;
+      }
+    }
+
+    &.what-section-others {
+
+      .what-section-description {
+        float: left;
+        width: 70%;
+      }
+
+      .what-section-image {
+        float: right;
+        width: 30%;
+        padding-left: 50px;
+        box-sizing: border-box;
+      }
+    }
+  }
 }
