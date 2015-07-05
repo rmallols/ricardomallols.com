@@ -69,6 +69,10 @@
     &.link-icon-where {
       background-image: url('img/whereIcon.svg');
     }
+
+    @media only screen and (max-width: @mobile-width-detection) {
+      display: none;
+    }
   }
 
   .link-text {
@@ -87,6 +91,10 @@
 
     &.link-text-where {
       color: @where-color;
+    }
+
+    @media only screen and (max-width: @mobile-width-detection) {
+      font-size: 110%;
     }
   }
 }

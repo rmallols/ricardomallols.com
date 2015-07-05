@@ -1,6 +1,5 @@
 .menu {
   @menu-padding: 40px;
-  @header-width-mobile: 100px;
   @header-border-width: 0px;
   @header-width: @menu-width - (2 * @menu-padding) - (2 * @header-border-width);
   float: left;
@@ -9,6 +8,9 @@
   box-sizing: border-box;
 
   @media only screen and (max-width: @mobile-width-detection) {
+    position: fixed;
+    top: 0;
+    width: 100%;
     height: 150px;
     padding: 0;
   }
@@ -27,12 +29,13 @@
     z-index: 1;
 
     @media only screen and (max-width: @mobile-width-detection) {
+      position: absolute;
       float: left;
-      width: @header-width-mobile;
-      height: 100%;
+      width: @header-dimensions-mobile;
+      height: @header-dimensions-mobile;
       border-radius: 0;
-      background-color: transparent;
-      background-size: auto 100%;
+      background-size: auto 82px;
+      background-position: -10px -2px;
     }
 
     .view-who & {
@@ -47,7 +50,7 @@
       background-image: url('img/RicardoMallolsWhere.png');
     }
   }
-  
+
   .navigation {
     @navigation-gutter: 60px;
     width: @header-width - (@navigation-gutter / 2);
@@ -57,10 +60,49 @@
     background-color: @background-color-2;
 
     @media only screen and (max-width: @mobile-width-detection) {
-      .offsettedWidth(-(@header-width-mobile));
+      .transition(margin @transition-duration);
+      .offsettedWidth(-2 * @header-dimensions-mobile);
       position: absolute;
-      top: 162px;
+      z-index: 1;
       padding: 0;
+      margin: -100% @header-dimensions-mobile 0 @header-dimensions-mobile;
+
+      &.navigation-toggled {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .current-page {
+    display: none;
+
+    @media only screen and (max-width: @mobile-width-detection) {
+      .offsettedWidth(-2 * @header-dimensions-mobile);
+      top: 0;
+      position: absolute;
+      display: block;
+      height: @header-dimensions-mobile;
+      background-color: @background-color-2;
+      margin: 0 @header-dimensions-mobile;
+      text-align: center;
+      padding-top: 11px;
+      box-sizing: border-box;
+    }
+  }
+
+  .menu-toggle {
+    display: none;
+
+    @media only screen and (max-width: @mobile-width-detection) {
+      background: @background-color-2 url('img/menuToggle.svg') no-repeat center center;
+      background-size: cover;
+      cursor: pointer;
+      width: @header-dimensions-mobile;
+      height: @header-dimensions-mobile;
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
     }
   }
 

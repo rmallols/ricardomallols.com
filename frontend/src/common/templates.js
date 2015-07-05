@@ -4,15 +4,17 @@ angular.module("menu.html", []).run(["$templateCache", function($templateCache) 
   $templateCache.put("menu.html",
     "<div class=\"menu\">\n" +
     "    <div class=\"header\"></div>\n" +
-    "    <ul class=\"navigation\">\n" +
+    "    <ul class=\"navigation\" ng-class=\"{'navigation-toggled': toggledMenu}\">\n" +
     "        <li ng-repeat=\"link in links\" class=\"link link-{{link.id}}\"\n" +
-    "            ng-class=\"{'link-current': link.id === currentState}\">\n" +
+    "            ng-class=\"{'link-current': link.id === currentState.name}\">\n" +
     "            <icon class=\"link-icon link-icon-{{link.id}}\"></icon>\n" +
     "            <a ui-sref=\"{{link.id}}\" class=\"link-text link-text-{{link.id}}\">\n" +
     "                {{link.text}}\n" +
     "            </a>\n" +
     "        </li>\n" +
     "    </ul>\n" +
+    "    <div class=\"current-page\">{{currentState.linkText}}</div>\n" +
+    "    <div class=\"menu-toggle\" ng-click=\"toggleMenu()\"></div>\n" +
     "    <a href=\"http://angularconnect.com/speakers#ricardo-mallols\"\n" +
     "       target=\"_blank\" class=\"angular-connect\">\n" +
     "        <img src=\"img/angularConnect.svg\" />\n" +

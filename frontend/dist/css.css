@@ -44,8 +44,8 @@ h2 {
 }
 @media only screen and (max-width: 720px) {
   .wrapper {
-    width: 100%;
     margin-left: 0;
+    margin-top: 78px;
   }
 }
 /* MICRO CLEARFIX HACK */
@@ -101,6 +101,9 @@ h2 {
 }
 @media only screen and (max-width: 720px) {
   .menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
     height: 150px;
     padding: 0;
   }
@@ -120,12 +123,13 @@ h2 {
 }
 @media only screen and (max-width: 720px) {
   .menu .header {
+    position: absolute;
     float: left;
-    width: 100px;
-    height: 100%;
+    width: 60px;
+    height: 60px;
     border-radius: 0;
-    background-color: transparent;
-    background-size: auto 100%;
+    background-size: auto 82px;
+    background-position: -10px -2px;
   }
 }
 .view-who .menu .header {
@@ -146,13 +150,57 @@ h2 {
 }
 @media only screen and (max-width: 720px) {
   .menu .navigation {
-    width: -webkit-calc(100% + -100px) !important;
-    width: -o-calc(100%  +  -100px) !important;
-    width: calc(100%  +  -100px) !important;
-    width: -webkit-calc(100%  +  -100px) !important;
+    -webkit-transition: margin 0.3s;
+    -moz-transition: margin 0.3s;
+    -ms-transition: margin 0.3s;
+    -o-transition: margin 0.3s;
+    width: -webkit-calc(100% + -120px) !important;
+    width: -o-calc(100%  +  -120px) !important;
+    width: calc(100%  +  -120px) !important;
+    width: -webkit-calc(100%  +  -120px) !important;
     position: absolute;
-    top: 162px;
+    z-index: 1;
     padding: 0;
+    margin: -100% 60px 0 60px;
+  }
+  .menu .navigation.navigation-toggled {
+    margin-top: 0;
+  }
+}
+.menu .current-page {
+  display: none;
+}
+@media only screen and (max-width: 720px) {
+  .menu .current-page {
+    width: -webkit-calc(100% + -120px) !important;
+    width: -o-calc(100%  +  -120px) !important;
+    width: calc(100%  +  -120px) !important;
+    width: -webkit-calc(100%  +  -120px) !important;
+    top: 0;
+    position: absolute;
+    display: block;
+    height: 60px;
+    background-color: #4e5665;
+    margin: 0 60px;
+    text-align: center;
+    padding-top: 11px;
+    box-sizing: border-box;
+  }
+}
+.menu .menu-toggle {
+  display: none;
+}
+@media only screen and (max-width: 720px) {
+  .menu .menu-toggle {
+    background: #4e5665 url('img/menuToggle.svg') no-repeat center center;
+    background-size: cover;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
   }
 }
 .menu .angular-connect {
@@ -238,6 +286,11 @@ h2 {
 .link .link-icon.link-icon-where {
   background-image: url('img/whereIcon.svg');
 }
+@media only screen and (max-width: 720px) {
+  .link .link-icon {
+    display: none;
+  }
+}
 .link .link-text {
   font-size: 130%;
   display: block;
@@ -252,6 +305,11 @@ h2 {
 }
 .link .link-text.link-text-where {
   color: #f7d884;
+}
+@media only screen and (max-width: 720px) {
+  .link .link-text {
+    font-size: 110%;
+  }
 }
 .view-who {
   background-image: url('img/who.svg');
