@@ -3,7 +3,9 @@ angular.module('templates-main', ['menu.html', 'what.html', 'where.html', 'who.h
 angular.module("menu.html", []).run(["$templateCache", function($templateCache) {
   $templateCache.put("menu.html",
     "<div class=\"menu\">\n" +
-    "    <div class=\"header\"></div>\n" +
+    "    <a ui-sref=\"who\">\n" +
+    "        <div class=\"header\"></div>\n" +
+    "    </a>\n" +
     "    <ul class=\"navigation\" ng-class=\"{'navigation-toggled': toggledMenu}\">\n" +
     "        <li ng-repeat=\"link in links\" class=\"link link-{{link.id}}\"\n" +
     "            ng-class=\"{'link-current': link.id === currentState.name}\">\n" +
@@ -99,8 +101,8 @@ angular.module("who.html", []).run(["$templateCache", function($templateCache) {
     "<p>\n" +
     "    <div class=\"col-2\">\n" +
     "        <h2 class=\"title title-section\">Coding</h2>\n" +
-    "        <p class=\"who-img-wrapper\">\n" +
-    "            <img src=\"img/whoCoding.svg\" class=\"who-img who-img-coding\"/>\n" +
+    "        <p class=\"img-wrapper\">\n" +
+    "            <img src=\"img/whoCoding.svg\" class=\"img img-coding\"/>\n" +
     "        </p>\n" +
     "        <p>\n" +
     "        I'm a technology enthusiast who enjoys running any kind of experimental\n" +
@@ -108,8 +110,8 @@ angular.module("who.html", []).run(["$templateCache", function($templateCache) {
     "    </div>\n" +
     "    <div class=\"col-2\">\n" +
     "        <h2 class=\"title title-section\">(Motor)Sports</h2>\n" +
-    "        <p class=\"who-img-wrapper\">\n" +
-    "            <img src=\"img/whoSports.svg\" class=\"who-img who-img-sports\"/>\n" +
+    "        <p class=\"img-wrapper\">\n" +
+    "            <img src=\"img/whoSports.svg\" class=\"img img-sports\"/>\n" +
     "        </p>\n" +
     "        I practice beach volleyball and tennis. I like motor racing,\n" +
     "        particularly F1, DTM, MotoGP and digital Slot. Anki Drive is the future!\n" +

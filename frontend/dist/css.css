@@ -15,7 +15,7 @@ body {
   font-family: balsamiq;
   color: white;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   body {
     padding: 0;
   }
@@ -42,7 +42,7 @@ h2 {
   margin-left: 400px;
   padding: 0 30px;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .wrapper {
     margin-left: 0;
     margin-top: 78px;
@@ -70,7 +70,7 @@ h2 {
 .col-2:last-of-type {
   padding-right: 0;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .col-2 {
     width: 100%;
   }
@@ -88,7 +88,7 @@ h2 {
 .col-3:last-of-type {
   padding-right: 0;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .col-3 {
     width: 100%;
   }
@@ -99,7 +99,7 @@ h2 {
   width: 400px;
   box-sizing: border-box;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .menu {
     position: fixed;
     top: 0;
@@ -121,7 +121,7 @@ h2 {
   position: relative;
   z-index: 1;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .menu .header {
     position: absolute;
     float: left;
@@ -148,7 +148,7 @@ h2 {
   border-radius: 0 0 20px 20px;
   background-color: #4e5665;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .menu .navigation {
     -webkit-transition: margin 0.3s;
     -moz-transition: margin 0.3s;
@@ -161,16 +161,18 @@ h2 {
     position: absolute;
     z-index: 1;
     padding: 0;
+    visibility: hidden;
     margin: -100% 60px 0 60px;
   }
   .menu .navigation.navigation-toggled {
     margin-top: 0;
+    visibility: visible;
   }
 }
 .menu .current-page {
   display: none;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .menu .current-page {
     width: -webkit-calc(100% + -120px) !important;
     width: -o-calc(100%  +  -120px) !important;
@@ -183,14 +185,14 @@ h2 {
     background-color: #4e5665;
     margin: 0 60px;
     text-align: center;
-    padding-top: 11px;
+    padding-top: 13px;
     box-sizing: border-box;
   }
 }
 .menu .menu-toggle {
   display: none;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .menu .menu-toggle {
     background: #4e5665 url('img/menuToggle.svg') no-repeat center center;
     background-size: cover;
@@ -211,7 +213,7 @@ h2 {
 .menu .angular-connect:hover {
   opacity: 1;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .menu .angular-connect {
     visibility: hidden;
   }
@@ -260,6 +262,11 @@ h2 {
 .link.link-current .link-text {
   color: white !important;
 }
+@media only screen and (max-width: 800px) {
+  .link:last-child {
+    border-radius: 0 0 20px 20px;
+  }
+}
 .link .link-icon {
   -webkit-transition: left 0.3s;
   -moz-transition: left 0.3s;
@@ -286,7 +293,7 @@ h2 {
 .link .link-icon.link-icon-where {
   background-image: url('img/whereIcon.svg');
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .link .link-icon {
     display: none;
   }
@@ -306,7 +313,7 @@ h2 {
 .link .link-text.link-text-where {
   color: #f7d884;
 }
-@media only screen and (max-width: 720px) {
+@media only screen and (max-width: 800px) {
   .link .link-text {
     font-size: 110%;
   }
@@ -317,7 +324,10 @@ h2 {
 .view-who .title {
   color: #00aaef;
 }
-.view-who .who-img {
+.view-who .img-wrapper {
+  margin-top: 0;
+}
+.view-who .img {
   height: 300px;
 }
 .view-who .title-section {
@@ -335,35 +345,50 @@ h2 {
   width: 100%;
   margin-bottom: 40px;
 }
-.view-what .what-section.what-section-javascript .what-section-description {
-  float: left;
-  width: 60%;
+@media only screen and (min-width: 800px) {
+  .view-what .what-section.what-section-javascript .what-section-description {
+    float: left;
+    width: 60%;
+  }
+  .view-what .what-section.what-section-javascript .what-section-image {
+    float: right;
+    width: 40%;
+    padding-left: 50px;
+    box-sizing: border-box;
+  }
+  .view-what .what-section.what-section-html .what-section-description {
+    float: right;
+    width: 64%;
+  }
+  .view-what .what-section.what-section-html .what-section-image {
+    float: left;
+    width: 36%;
+    padding-right: 50px;
+    box-sizing: border-box;
+  }
+  .view-what .what-section.what-section-others .what-section-description {
+    float: left;
+    width: 70%;
+  }
+  .view-what .what-section.what-section-others .what-section-image {
+    float: right;
+    width: 30%;
+    padding-left: 50px;
+    box-sizing: border-box;
+  }
 }
-.view-what .what-section.what-section-javascript .what-section-image {
-  float: right;
-  width: 40%;
-  padding-left: 50px;
-  box-sizing: border-box;
+@media only screen and (max-width: 800px) {
+  .view-what .what-section .what-section-description {
+    width: 100%;
+    float: left;
+  }
 }
-.view-what .what-section.what-section-html .what-section-description {
-  float: right;
-  width: 64%;
-}
-.view-what .what-section.what-section-html .what-section-image {
-  float: left;
-  width: 36%;
-  padding-right: 50px;
-  box-sizing: border-box;
-}
-.view-what .what-section.what-section-others .what-section-description {
-  float: left;
-  width: 70%;
-}
-.view-what .what-section.what-section-others .what-section-image {
-  float: right;
-  width: 30%;
-  padding-left: 50px;
-  box-sizing: border-box;
+@media only screen and (max-width: 800px) {
+  .view-what .what-section .what-section-image {
+    width: 100%;
+    float: left;
+    margin-top: 30px;
+  }
 }
 .view-where {
   background-image: url('img/where.svg');

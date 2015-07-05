@@ -65,10 +65,12 @@
       position: absolute;
       z-index: 1;
       padding: 0;
+      visibility: hidden;
       margin: -100% @header-dimensions-mobile 0 @header-dimensions-mobile;
 
       &.navigation-toggled {
         margin-top: 0;
+        visibility: visible;
       }
     }
   }
@@ -85,7 +87,7 @@
       background-color: @background-color-2;
       margin: 0 @header-dimensions-mobile;
       text-align: center;
-      padding-top: 11px;
+      padding-top: 13px;
       box-sizing: border-box;
     }
   }

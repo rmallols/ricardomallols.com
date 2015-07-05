@@ -10,48 +10,66 @@
     width: 100%;
     margin-bottom: 40px;
 
-    &.what-section-javascript {
+    @media only screen and (min-width: @mobile-width-detection) {
 
-      .what-section-description {
-        float: left;
-        width: 60%;
+      &.what-section-javascript {
+
+        .what-section-description {
+          float: left;
+          width: 60%;
+        }
+
+        .what-section-image {
+          float: right;
+          width: 40%;
+          padding-left: 50px;
+          box-sizing: border-box;
+        }
       }
 
-      .what-section-image {
-        float: right;
-        width: 40%;
-        padding-left: 50px;
-        box-sizing: border-box;
+      &.what-section-html {
+
+        .what-section-description {
+          float: right;
+          width: 64%;
+        }
+
+        .what-section-image {
+          float: left;
+          width: 36%;
+          padding-right: 50px;
+          box-sizing: border-box;
+        }
+      }
+
+      &.what-section-others {
+
+        .what-section-description {
+          float: left;
+          width: 70%;
+        }
+
+        .what-section-image {
+          float: right;
+          width: 30%;
+          padding-left: 50px;
+          box-sizing: border-box;
+        }
       }
     }
 
-    &.what-section-html {
-
-      .what-section-description {
-        float: right;
-        width: 64%;
-      }
-
-      .what-section-image {
+    .what-section-description {
+      @media only screen and (max-width: @mobile-width-detection) {
+        width: 100%;
         float: left;
-        width: 36%;
-        padding-right: 50px;
-        box-sizing: border-box;
       }
     }
 
-    &.what-section-others {
-
-      .what-section-description {
+    .what-section-image {
+      @media only screen and (max-width: @mobile-width-detection) {
+        width: 100%;
         float: left;
-        width: 70%;
-      }
-
-      .what-section-image {
-        float: right;
-        width: 30%;
-        padding-left: 50px;
-        box-sizing: border-box;
+        margin-top: 30px;
       }
     }
   }
