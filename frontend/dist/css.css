@@ -15,7 +15,7 @@ body {
   font-family: balsamiq;
   color: white;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   body {
     padding: 0;
   }
@@ -70,7 +70,7 @@ h2 {
 .col-2:last-of-type {
   padding-right: 0;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   .col-2 {
     width: 100%;
   }
@@ -88,7 +88,7 @@ h2 {
 .col-3:last-of-type {
   padding-right: 0;
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   .col-3 {
     width: 100%;
   }
@@ -326,13 +326,25 @@ h2 {
 }
 .view-who .img-wrapper {
   margin-top: 0;
+  text-align: center;
+}
+.view-who .img-wrapper-coding {
+  margin: 0 10px;
+}
+.view-who .img-wrapper-sports {
+  margin-bottom: 35px;
 }
 .view-who .img {
-  height: 300px;
+  width: 100%;
 }
 .view-who .title-section {
   margin-top: 0;
   text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+  .view-who .title-section {
+    text-align: left;
+  }
 }
 .view-what {
   background-image: url('img/what.svg');
@@ -345,7 +357,7 @@ h2 {
   width: 100%;
   margin-bottom: 40px;
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1024px) {
   .view-what .what-section.what-section-javascript .what-section-description {
     float: left;
     width: 60%;
@@ -377,13 +389,13 @@ h2 {
     box-sizing: border-box;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   .view-what .what-section .what-section-description {
     width: 100%;
     float: left;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
   .view-what .what-section .what-section-image {
     width: 100%;
     float: left;
