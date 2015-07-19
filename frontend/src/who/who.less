@@ -7,14 +7,27 @@
 
   .img-wrapper {
     margin-top: 0;
+    text-align: center;
+  }
+
+  .img-wrapper-coding {
+    margin: 0 10px;
+  }
+
+  .img-wrapper-sports {
+    margin-bottom: 35px;
   }
 
   .img {
-    height: 300px;
+    width: 100%;
   }
 
   .title-section {
     margin-top: 0;
     text-align: center;
+
+    @media only screen and (max-width: @mobile-width-detection) {
+      text-align: left;
+    }
   }
 }

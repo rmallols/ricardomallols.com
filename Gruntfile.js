@@ -130,5 +130,5 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-ftp-deploy');
 
     grunt.registerTask('generateJs', ['concat', 'uglify']);
-    grunt.registerTask('setupDevEnv', ['concurrent']);
+    grunt.registerTask('setupDevEnv', ['bower', 'generateJs', 'concurrent']);
 };
