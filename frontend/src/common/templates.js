@@ -101,7 +101,7 @@ angular.module("who.html", []).run(["$templateCache", function($templateCache) {
     "<p>\n" +
     "    <div class=\"col-2\">\n" +
     "        <h2 class=\"title title-section\">Coding</h2>\n" +
-    "        <p class=\"img-wrapper\">\n" +
+    "        <p class=\"img-wrapper img-wrapper-coding\">\n" +
     "            <img src=\"img/who/coding.svg\" class=\"img img-coding\"/>\n" +
     "        </p>\n" +
     "        <p>\n" +
@@ -110,7 +110,7 @@ angular.module("who.html", []).run(["$templateCache", function($templateCache) {
     "    </div>\n" +
     "    <div class=\"col-2\">\n" +
     "        <h2 class=\"title title-section\">(Motor)Sports</h2>\n" +
-    "        <p class=\"img-wrapper\">\n" +
+    "        <p class=\"img-wrapper img-wrapper-sports\">\n" +
     "            <img src=\"img/who/sports.svg\" class=\"img img-sports\"/>\n" +
     "        </p>\n" +
     "        I practice beach volleyball and tennis. I like motor racing,\n" +
