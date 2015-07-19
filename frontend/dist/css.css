@@ -27,7 +27,7 @@ a:hover {
   text-decoration: underline;
 }
 img {
-  max-width: 100%;
+  width: 100%;
 }
 h1 {
   font-size: 140%;
@@ -133,13 +133,13 @@ h2 {
   }
 }
 .view-who .menu .header {
-  background-image: url('img/RicardoMallolsWho.png');
+  background-image: url('img/who/RicardoMallols.svg');
 }
 .view-what .menu .header {
-  background-image: url('img/RicardoMallolsWhat.png');
+  background-image: url('img/what/RicardoMallols.svg');
 }
 .view-where .menu .header {
-  background-image: url('img/RicardoMallolsWhere.png');
+  background-image: url('img/where/RicardoMallols.svg');
 }
 .menu .navigation {
   width: 290px;
@@ -194,7 +194,7 @@ h2 {
 }
 @media only screen and (max-width: 800px) {
   .menu .menu-toggle {
-    background: #4e5665 url('img/menuToggle.svg') no-repeat center center;
+    background: #4e5665 url('img/common/menuToggle.svg') no-repeat center center;
     background-size: cover;
     cursor: pointer;
     width: 60px;
@@ -285,13 +285,13 @@ h2 {
   background-size: 80%;
 }
 .link .link-icon.link-icon-who {
-  background-image: url('img/whoIcon.svg');
+  background-image: url('img/who/icon.svg');
 }
 .link .link-icon.link-icon-what {
-  background-image: url('img/whatIcon.svg');
+  background-image: url('img/what/icon.svg');
 }
 .link .link-icon.link-icon-where {
-  background-image: url('img/whereIcon.svg');
+  background-image: url('img/where/icon.svg');
 }
 @media only screen and (max-width: 800px) {
   .link .link-icon {
@@ -319,7 +319,7 @@ h2 {
   }
 }
 .view-who {
-  background-image: url('img/who.svg');
+  background-image: url('img/who/background.svg');
 }
 .view-who .title {
   color: #00aaef;
@@ -335,7 +335,7 @@ h2 {
   text-align: center;
 }
 .view-what {
-  background-image: url('img/what.svg');
+  background-image: url('img/what/background.svg');
 }
 .view-what .title {
   color: #82cf8f;
@@ -391,7 +391,7 @@ h2 {
   }
 }
 .view-where {
-  background-image: url('img/where.svg');
+  background-image: url('img/where/background.svg');
 }
 .view-where .title {
   color: #f7d884;

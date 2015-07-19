@@ -19,7 +19,7 @@ angular.module("menu.html", []).run(["$templateCache", function($templateCache) 
     "    <div class=\"menu-toggle\" ng-click=\"toggleMenu()\"></div>\n" +
     "    <a href=\"http://angularconnect.com/speakers#ricardo-mallols\"\n" +
     "       target=\"_blank\" class=\"angular-connect\">\n" +
-    "        <img src=\"img/angularConnect.svg\" />\n" +
+    "        <img src=\"img/common/angularConnect.svg\" />\n" +
     "    </a>\n" +
     "</div>");
 }]);
@@ -35,7 +35,7 @@ angular.module("what.html", []).run(["$templateCache", function($templateCache) 
     "        perspective since then.\n" +
     "        Testing is a must for me (unit + functional + integration).\n" +
     "    </div>\n" +
-    "    <img class=\"what-section-image\" src=\"img/angularJs.svg\"/>\n" +
+    "    <img class=\"what-section-image\" src=\"img/what/angularJs.svg\"/>\n" +
     "</div>\n" +
     "<div class=\"what-section what-section-html\">\n" +
     "    <h2 class=\"title title-section\">HTML(5) & CSS(3)</h2>\n" +
@@ -47,7 +47,7 @@ angular.module("what.html", []).run(["$templateCache", function($templateCache) 
     "        I really like to work on UI / UX topics, and I build my apps based on the\n" +
     "        mobile-first principle.\n" +
     "    </div>\n" +
-    "    <img class=\"what-section-image\" src=\"img/html5.svg\"/>\n" +
+    "    <img class=\"what-section-image\" src=\"img/what/html5.svg\"/>\n" +
     "</div>\n" +
     "<div class=\"what-section what-section-others\">\n" +
     "    <h2 class=\"title title-section\">HTML(5) & CSS(3)</h2>\n" +
@@ -57,7 +57,7 @@ angular.module("what.html", []).run(["$templateCache", function($templateCache) 
     "        NodeJs, Express, GruntJs, Bower and MongoDB\n" +
     "        Talking about deployment, I've been working with TeamCity, Jenkins and Heroku.\n" +
     "    </div>\n" +
-    "    <img class=\"what-section-image\" src=\"img/nodeJs.svg\"/>\n" +
+    "    <img class=\"what-section-image\" src=\"img/what/nodeJs.svg\"/>\n" +
     "</div>");
 }]);
 
@@ -66,13 +66,13 @@ angular.module("where.html", []).run(["$templateCache", function($templateCache)
     "<div>\n" +
     "    <div class=\"col-2 contact-method\">\n" +
     "        <a href=\"mailto:hi@ricardomallols.com\">\n" +
-    "            <img src=\"img/mail.svg\"/>\n" +
+    "            <img src=\"img/where/mail.svg\"/>\n" +
     "            hi@ricardomallols.com\n" +
     "        </a>\n" +
     "    </div>\n" +
     "    <div class=\"col-2 contact-method\">\n" +
     "        <a href=\"http://www.linkedin.com/pub/ricardo-mallols-olmos/20/6a/708\">\n" +
-    "            <img src=\"img/linkedin.svg\"/>\n" +
+    "            <img src=\"img/where/linkedin.svg\"/>\n" +
     "            Ricardo Mallols\n" +
     "        </a>\n" +
     "    </div>\n" +
@@ -80,13 +80,13 @@ angular.module("where.html", []).run(["$templateCache", function($templateCache)
     "<div>\n" +
     "    <div class=\"col-2 contact-method\">\n" +
     "        <a href=\"https://twitter.com/#!/RicardoMallols\">\n" +
-    "            <img src=\"img/twitter.svg\"/>\n" +
+    "            <img src=\"img/where/twitter.svg\"/>\n" +
     "            @RicardoMallols\n" +
     "        </a>\n" +
     "    </div>\n" +
     "    <div class=\"col-2 contact-method\">\n" +
     "        <a href=\"https://github.com/rmallols\">\n" +
-    "            <img src=\"img/github.svg\"/>\n" +
+    "            <img src=\"img/where/github.svg\"/>\n" +
     "            Rmallols\n" +
     "        </a>\n" +
     "    </div>\n" +
@@ -102,7 +102,7 @@ angular.module("who.html", []).run(["$templateCache", function($templateCache) {
     "    <div class=\"col-2\">\n" +
     "        <h2 class=\"title title-section\">Coding</h2>\n" +
     "        <p class=\"img-wrapper\">\n" +
-    "            <img src=\"img/whoCoding.svg\" class=\"img img-coding\"/>\n" +
+    "            <img src=\"img/who/coding.svg\" class=\"img img-coding\"/>\n" +
     "        </p>\n" +
     "        <p>\n" +
     "        I'm a technology enthusiast who enjoys running any kind of experimental\n" +
@@ -111,7 +111,7 @@ angular.module("who.html", []).run(["$templateCache", function($templateCache) {
     "    <div class=\"col-2\">\n" +
     "        <h2 class=\"title title-section\">(Motor)Sports</h2>\n" +
     "        <p class=\"img-wrapper\">\n" +
-    "            <img src=\"img/whoSports.svg\" class=\"img img-sports\"/>\n" +
+    "            <img src=\"img/who/sports.svg\" class=\"img img-sports\"/>\n" +
     "        </p>\n" +
     "        I practice beach volleyball and tennis. I like motor racing,\n" +
     "        particularly F1, DTM, MotoGP and digital Slot. Anki Drive is the future!\n" +

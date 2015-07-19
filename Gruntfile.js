@@ -112,7 +112,7 @@ module.exports = function (grunt) {
                     authKey: 'user1'
                 },
                 src: 'frontend/dist',
-                dest: '/v2',
+                dest: '/',
                 exclusions: []
             }
         }
